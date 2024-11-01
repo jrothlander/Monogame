@@ -2,8 +2,9 @@
 > Introduction to Monogame and 2D Game Development in C#
 
 * Introduction
-  * Expectations
+  * Course Expectations
   * About the Author
+    
 * Welcome to MonoGame
   * Overview
   * History

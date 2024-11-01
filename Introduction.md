@@ -1,6 +1,6 @@
 # Introduction 
 
-### Cource Expectation
+### Course Expectations
 
 If you have a grasp on the basics of C#, I recommend you start with another course to get the basics under your belt. Come back here once you have a decent understanding of the basics of C#. If this describes you, I’ve included a section in the appendix for prerequisite courses and book reviews that will give you some ideas and a few recommendations on where to start. It should not take you long to work through the basics and there are significant resources available to help you. It is simply beyond the scope of this text to cover a C# introduction.
 

@@ -1,26 +1,23 @@
 # Intro MonoGame 
 > Introduction to Monogame and 2D Game Development in C#
 
-* Introduction
-  * Course Expectations
-  * About the Author
-    
-* Welcome to MonoGame
+- Introduction
+  * [Course Expectations](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#Course-Expectations)
+  * About the Author    
+- Welcome to MonoGame
   * Overview
   * History
   * Where to Start?
-
-* Your first MonoGame Project
+- Your first MonoGame Project
   * Creating a MonoGame Project
   * MonoGame Template
   * Game Class
-    * Initialize, LoadContent, Update, and Draw
+    + Initialize, LoadContent, Update, and Draw
   * Game Window
   * Game Loop
   * FPS 
   * Game Time
-
-* Starfield Demo  
+- Starfield Demo  
   * SpriteBatch
     
 * Content Pipeline

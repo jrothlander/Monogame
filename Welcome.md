@@ -1,0 +1,14 @@
+## Welcome
+### Overview
+MonoGame is a .Net game development framework for desktop PCs, game consoles, and mobile devices. It is also a reimplementation of Microsoft’s XNA framework, which provides a very powerful framework for 2D and 3D game development. In short, it has everything you need to build cross-platform games in C# and .Net that can be deployed on Windows, MacOS, Linux, Xbox, PS4, PS5, Nintendo Switch, mobile phones, and others. It is an open-source project overseen by the MonoGame Foundation and maintained by an active community.  
+
+What this means to you as a developer, is that you can develop games in C# and Visual Studio and lean on your favorite .Net libraries and packages that you already know. It also means that everything you will be working with will be managed C#. 
+
+While you don’t actually need to use MonoGame or XNA to develop games in C#, doing so makes it much easier because MonoGame provides a powerful framework and a common API that supports graphics and multimedia packages for a number of different platforms. While you certainly can become an expert in each of those technologies for each OS, platform, and console you wish to deploy your game on, a better approach would be to code to a common framework and let the framework handle those details. But if you have a desire to dig into the depths, you certainly can, as MonoGame is opensource. 
+
+To keep things simple, we will be using MonoGame, C#, .Net Core, and targeting the Windows OS.
+
+### History
+Microsoft XNA Game Studio was Microsoft’s .Net game development platform and IDE from 2004 to 2014. It wasn’t publicly available until 2006, and in 2007 a project called Mono.XNA began development as a cross-platform implementation of the XNA framework, based on the cross-platform .Net Mono project. Later another project named XNA Touch was developed to provide a facility to port XNA to mobile “touch” devices and was first released in 2009. XNA Touch incorporated Mono.XNA and was later renamed to MonoGame in 2011, choosing “mono” due to both the .Net Mono project and cross-platform support. A few years later in 2014, Microsoft decided to stop supporting XNA due to the popularity of other .Net based gaming engines and frameworks such as Unity and UnReal. It was due to this that the MonoGame team decided to implement the XNA Framework within MonoGame, keeping the original Microsoft.Xna.Framework namespaces to allow for backwards compatibility. This means that MonoGame doesn’t depend on XNA Framework per say, it implements it.  
+
+From our point of view as developers, this should give us the assurance that MonoGame and the reimplementation of XNA Framework within, will allow MonoGame to continue for the foreseeable future. This also means that we can port XNA applications to MonoGame with minimal effort and allows us to access nearly 20-years of XNA game development content, books, demos to learn from. 

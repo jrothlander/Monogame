@@ -3,7 +3,8 @@
 
 - Introduction
   * [Course Expectations](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#Course-Expectations)
-  * About the Author    
+  * [About the Author](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#About-the-Author)
+  * [2D vs 3D?](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#2d-vs-3d)  
 - Welcome to MonoGame
   * Overview
   * History

@@ -11,6 +11,8 @@ Designers use a sheet of sprites, called a spritesheet to hold multiple sprites 
 
 Many of the older games were built using only sprites for images. 3D games often use sprites for 2D drawings and text. For our retro arcade games, will use sprites for all our graphics. Not only does this remove the need to develop 3D models, but it also allows us to quickly box out our games using simple rectangles to work out the game play and game features, then skin our games using our own custom sprites or use any of the millions of free sprites available online.
 
+## Animating Sprites
+
 A series of sprites can be used to animate a character’s movement such walking, jumping, or an explosion. The animation is created by drawing a series of sprites as individual frames, sort of like an animated gif or an animated flipbook. For now, we will be focusing on simple sprites and not animating them. Later we will investigate animating our sprites. There are numerous online tools to help you work with animates sprites. However, for our needs we will roll out or own animation methods from scratch so we can see how this works, and we will discuss a few NuGet packages that can make it easier to work with animated sprites. 
 
 ## SpriteBatch

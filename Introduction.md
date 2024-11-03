@@ -29,7 +29,8 @@ However, we don’t have to build them the same as they would have been in 1980s
 
 So, lets jump in. 
 
-### What if my goal is to be a 3D game developer? Is it worth the time to learn 2D? What about MonoGame?
+### 2D vs 3D 
+#### What if my goal is to be a 3D game developer? Is it worth the time to learn 2D? What about MonoGame?
 
 2D and 3D game development skills are significantly different skillsets in many regards. However, I believe that everything you learn 2D game development will help you in 3D. Since we are using MonoGame for our game development framework, we will be implementing our own game engine. Make sure you understand what I just said. MonoGame is not a game engine, it is a framework to build a game engine. That means that we will not be using the MonoGame collision framework, because it does not exist, and we will be building our own. Sounds complicated right? It is not. Typically the collision functions for a retro style arcade game take up less than 5 lines of code.  Sure, you can go crazy and build much more complex systems, or use third party libraries if you feel that it is a better fit for your needs. But the point is that you don't have to. You have the flexibility to decide. Everything we will be working with will not require any math skills beyond simple trigonometry (using sin and cos) and some basic matrix algebra. If you need a review of those, we will go over all of the details.  
 

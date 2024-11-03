@@ -5,10 +5,10 @@
   * [Course Expectations](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#Course-Expectations)
   * [About the Author](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#About-the-Author)
   * [2D vs 3D?](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#2d-vs-3d)  
-- Welcome to MonoGame
-  * Overview
-  * History
-  * Where to Start?
+- Welcome to MonoGame  
+  * [Overiew](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#Overview)    
+  * [History](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#History)    
+  * [Where to Start?](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#where-to-start?)  
 - Your first MonoGame Project
   * Creating a MonoGame Project
   * MonoGame Template

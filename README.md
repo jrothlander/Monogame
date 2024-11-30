@@ -64,6 +64,9 @@
   * Atari Adventure (1980)
   * Galaga (1981)
   * Pac-Man (1980)
+
+* Game AI & AI
+  * Genetic Algorithms  
   
 * Appendix
   * OpenGL Demo

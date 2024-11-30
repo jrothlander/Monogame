@@ -4,7 +4,10 @@
 - Introduction
   * [Course Expectations](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#Course-Expectations)
   * [About the Author](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#About-the-Author)
-  * [2D vs 3D?](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#2d-vs-3d)  
+- [2D vs 3D?](https://github.com/jrothlander/MonogameCourse/blob/main/Introduction.md#2d-vs-3d)
+  * What options do I really have?
+  * If 3D is the goal, is 2D worth the time?
+  * C# vs C++
 - Welcome to MonoGame  
   * [Overiew](https://github.com/jrothlander/MonogameCourse/blob/main/Welcome.md#Overview)    
   * [History](https://github.com/jrothlander/MonogameCourse/blob/main/Welcome.md#History)    
@@ -18,7 +21,7 @@
   * Game Loop
   * FPS 
   * Game Time
-- Starfield Demo  
+- SpriteBatch - Starfield Demo  
   * SpriteBatch
     
 * Content Pipeline

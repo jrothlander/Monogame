@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/JGRothlander/source/training/games/Pong/Xbox.Galaga/Content/sounds/galaga_level_start_sound.mp3</SourceFile>
+  <SourceTime>2025-02-03T16:48:42.3563751-06:00</SourceTime>
+  <DestFile>C:/Users/JGRothlander/source/training/games/Pong/Xbox.Galaga/Content/bin/WindowsStoreApp/Content/sounds/galaga_level_start_sound.xnb</DestFile>
+  <DestTime>2025-02-03T16:50:20.1516053-06:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2022-07-26T06:44:56-05:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

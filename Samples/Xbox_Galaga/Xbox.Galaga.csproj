@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xbox.Galaga</RootNamespace>
+    <AssemblyName>Xbox.Galaga</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{199DBD4F-E240-4B35-9D1F-EAB9AE7D1432}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Enemy\Enemy.cs" />
+    <Compile Include="Enemy\EnemyManager.cs" />
+    <Compile Include="Enemy\EnemyPatternEngine.cs" />
+    <Compile Include="Explosions\Explosion.cs" />
+    <Compile Include="Explosions\ExplosionHandler.cs" />
+    <Compile Include="FrameCounter.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="GamePage.xaml.cs">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\CollisionHandler.cs" />
+    <Compile Include="Handlers\GameStatsHandler.cs" />
+    <Compile Include="Handlers\LevelHandler.cs" />
+    <Compile Include="Handlers\SoundManager.cs" />
+    <Compile Include="Handlers\TextToSpriteHandler.cs" />
+    <Compile Include="Handlers\TitleScreenHandler.cs" />
+    <Compile Include="Models\Projectile.cs" />
+    <Compile Include="Player\Player.cs" />
+    <Compile Include="Player\PlayerHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\Screens.cs" />
+    <Compile Include="Starfield\Star.cs" />
+    <Compile Include="Starfield\Starfield.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bin\Windows\Content\sounds\galaga_enemy_explosion_sound.wma" />
+    <Content Include="Content\bin\Windows\Content\sounds\galaga_level_start_sound.wma" />
+    <Content Include="Content\bin\Windows\Content\sounds\galaga_player_explosion_sound.wma" />
+    <Content Include="Content\bin\Windows\Content\sounds\galaga_player_firing_sound.wma" />
+    <Content Include="Content\images\galaga-logo.png" />
+    <Content Include="Content\images\galaga-screens.png" />
+    <Content Include="Content\images\galaga-sprites.png" />
+    <Content Include="Content\images\galaga-sprites_transparent.png" />
+    <Content Include="Content\images\star.png" />
+    <Content Include="Content\sounds\galaga_enemy_explosion_sound.mp3" />
+    <Content Include="Content\sounds\galaga_level_start_sound.mp3" />
+    <Content Include="Content\sounds\galaga_player_explosion_sound.mp3" />
+    <Content Include="Content\sounds\galaga_player_firing_sound.mp3" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="GamePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.13</Version>
+    </PackageReference>
+    <PackageReference Include="MonoGame.Framework.WindowsUniversal" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\bin\DesktopGL\Content\images\galaga-logo.xnb" />
+    <None Include="Content\bin\DesktopGL\Content\images\galaga-screens.xnb" />
+    <None Include="Content\bin\DesktopGL\Content\images\galaga-sprites.xnb" />
+    <None Include="Content\bin\DesktopGL\Content\images\galaga-sprites_transparent.xnb" />
+    <None Include="Content\bin\DesktopGL\Content\images\star.xnb" />
+    <None Include="Content\bin\DesktopGL\Content\sounds\galaga_enemy_explosion_sound.xnb" />
+    <None Include="Content\bin\DesktopGL\Content\sounds\galaga_level_start_sound.xnb" />
+    <None Include="Content\bin\DesktopGL\Content\sounds\galaga_player_explosion_sound.xnb" />
+    <None Include="Content\bin\DesktopGL\Content\sounds\galaga_player_firing_sound.xnb" />
+    <None Include="Content\bin\Windows\Content\images\galaga-logo.xnb" />
+    <None Include="Content\bin\Windows\Content\images\galaga-screens.xnb" />
+    <None Include="Content\bin\Windows\Content\images\galaga-sprites.xnb" />
+    <None Include="Content\bin\Windows\Content\images\galaga-sprites_transparent.xnb" />
+    <None Include="Content\bin\Windows\Content\images\star.xnb" />
+    <None Include="Content\bin\Windows\Content\sounds\galaga_enemy_explosion_sound.xnb" />
+    <None Include="Content\bin\Windows\Content\sounds\galaga_level_start_sound.xnb" />
+    <None Include="Content\bin\Windows\Content\sounds\galaga_player_explosion_sound.xnb" />
+    <None Include="Content\bin\Windows\Content\sounds\galaga_player_firing_sound.xnb" />
+    <None Include="Content\bin\Windows\images\galaga-logo.xnb" />
+    <None Include="Content\bin\Windows\images\galaga-screens.xnb" />
+    <None Include="Content\bin\Windows\images\galaga-sprites.xnb" />
+    <None Include="Content\bin\Windows\images\galaga-sprites_transparent.xnb" />
+    <None Include="Content\bin\Windows\images\star.xnb" />
+    <None Include="Content\bin\Windows\sounds\galaga_enemy_explosion_sound.xnb" />
+    <None Include="Content\bin\Windows\sounds\galaga_level_start_sound.xnb" />
+    <None Include="Content\bin\Windows\sounds\galaga_player_explosion_sound.xnb" />
+    <None Include="Content\bin\Windows\sounds\galaga_player_firing_sound.xnb" />
+    <None Include="Content\Content.mgcb" />
+    <None Include="Content\obj\DesktopGL\net8.0\Content\.mgcontent" />
+    <None Include="Content\obj\DesktopGL\net8.0\Content\.mgstats" />
+    <None Include="Content\obj\DesktopGL\net8.0\Content\images\galaga-logo.mgcontent" />
+    <None Include="Content\obj\DesktopGL\net8.0\Content\images\galaga-screens.mgcontent" />
+    <None Include="Content\obj\DesktopGL\net8.0\Content\images\galaga-sprites.mgcontent" />
+    <None Include="Content\obj\DesktopGL\net8.0\Content\images\galaga-sprites_transparent.mgcontent" />
+    <None Include="Content\obj\DesktopGL\net8.0\Content\images\star.mgcontent" />
+    <None Include="Content\obj\DesktopGL\net8.0\Content\sounds\galaga_enemy_explosion_sound.mgcontent" />
+    <None Include="Content\obj\DesktopGL\net8.0\Content\sounds\galaga_level_start_sound.mgcontent" />
+    <None Include="Content\obj\DesktopGL\net8.0\Content\sounds\galaga_player_explosion_sound.mgcontent" />
+    <None Include="Content\obj\DesktopGL\net8.0\Content\sounds\galaga_player_firing_sound.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\.mgstats" />
+    <None Include="Content\obj\Windows\.mgcontent" />
+    <None Include="Content\obj\Windows\.mgstats" />
+    <None Include="Content\obj\Windows\images\galaga-logo.mgcontent" />
+    <None Include="Content\obj\Windows\images\galaga-screens.mgcontent" />
+    <None Include="Content\obj\Windows\images\galaga-sprites.mgcontent" />
+    <None Include="Content\obj\Windows\images\galaga-sprites_transparent.mgcontent" />
+    <None Include="Content\obj\Windows\images\star.mgcontent" />
+    <None Include="Content\obj\Windows\net6.0-windows\Content\.mgcontent" />
+    <None Include="Content\obj\Windows\net6.0-windows\Content\.mgstats" />
+    <None Include="Content\obj\Windows\net6.0-windows\Content\images\galaga-logo.mgcontent" />
+    <None Include="Content\obj\Windows\net6.0-windows\Content\images\galaga-screens.mgcontent" />
+    <None Include="Content\obj\Windows\net6.0-windows\Content\images\galaga-sprites.mgcontent" />
+    <None Include="Content\obj\Windows\net6.0-windows\Content\images\galaga-sprites_transparent.mgcontent" />
+    <None Include="Content\obj\Windows\net6.0-windows\Content\images\star.mgcontent" />
+    <None Include="Content\obj\Windows\net6.0-windows\Content\sounds\galaga_enemy_explosion_sound.mgcontent" />
+    <None Include="Content\obj\Windows\net6.0-windows\Content\sounds\galaga_level_start_sound.mgcontent" />
+    <None Include="Content\obj\Windows\net6.0-windows\Content\sounds\galaga_player_explosion_sound.mgcontent" />
+    <None Include="Content\obj\Windows\net6.0-windows\Content\sounds\galaga_player_firing_sound.mgcontent" />
+    <None Include="Content\obj\Windows\sounds\galaga_enemy_explosion_sound.mgcontent" />
+    <None Include="Content\obj\Windows\sounds\galaga_level_start_sound.mgcontent" />
+    <None Include="Content\obj\Windows\sounds\galaga_player_explosion_sound.mgcontent" />
+    <None Include="Content\obj\Windows\sounds\galaga_player_firing_sound.mgcontent" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\bin\WindowsStoreApp\Content\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+    <Message Text="Restoring dotnet tools" Importance="High" />
+    <Exec Command="dotnet tool restore" />
+  </Target>
+</Project>

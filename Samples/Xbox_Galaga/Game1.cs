@@ -1,9 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Xbox.Galaga.Handlers;
 using Xbox.Galaga.Player;
+using Xbox_Galaga.InputControl;
 
 namespace Xbox.Galaga
 {
@@ -15,7 +16,7 @@ namespace Xbox.Galaga
         private int ScreenWidth { get; set; }
         private int ScreenHeight { get; set; }
 
-        private readonly FrameCounter _frameCounter = new();
+        private readonly FrameCounter _frameCounter = new FrameCounter();
         private Starfield.Starfield _starfield;
         private LevelHandler _levelHandler;
         private Player.PlayerHandler _playerHandler;
@@ -26,6 +27,8 @@ namespace Xbox.Galaga
 
         private Screens.Screens _screens;
         private TitleScreenHandler _titleScreenHandler;
+
+        private GamePadController _gamePad;
 
         private enum GameStates
         {
@@ -56,12 +59,14 @@ namespace Xbox.Galaga
             _playerHandler = new PlayerHandler();
             _screens = new Screens.Screens();
             _titleScreenHandler = new TitleScreenHandler();
+            _gamePad = new GamePadController(this);
 
             // Just testing adding services to see if it would work. But probably not where we want to use this.
             //Services.AddService(typeof(LevelHandler), new LevelHandler());
             Services.AddService(typeof(LevelHandler), _levelHandler);
             Services.AddService(typeof(PlayerHandler), _playerHandler);
             Services.AddService(typeof(TitleScreenHandler), _titleScreenHandler);
+            Services.AddService(typeof(GamePadController), _gamePad);
 
             // This is probably one where it actually is useful
             //Services.AddService(typeof(SoundManager), SoundManager);
@@ -98,6 +103,9 @@ namespace Xbox.Galaga
 
         protected override void Update(GameTime gameTime)
         {
+            var gamePad = GamePad.GetState(PlayerIndex.One);
+
+
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
                 Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
@@ -109,7 +117,7 @@ namespace Xbox.Galaga
             {
                 case GameStates.TitleScreen:
                     _titleScreenHandler.Update(gameTime);
-                    if (Keyboard.GetState().IsKeyDown(Keys.Space))
+                    if (Keyboard.GetState().IsKeyDown(Keys.Space) || gamePad.Buttons.A == ButtonState.Pressed)
                         _gameState = GameStates.Playing;
                     break;
 
@@ -119,7 +127,7 @@ namespace Xbox.Galaga
                     break;
 
                 case GameStates.GameOver:
-                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                    if (Keyboard.GetState().IsKeyDown(Keys.Enter) || gamePad.Buttons.B == ButtonState.Pressed)
                     {
                         _gameState = GameStates.TitleScreen;
                         _levelHandler.Reset();
@@ -160,13 +168,19 @@ namespace Xbox.Galaga
                     break;
 
                 case GameStates.GameOver:
-                    _screens.DrawResultsScreen(_spriteBatch, _spriteSheet, ScreenWidth);
+                    _screens.DrawResultsScreen(_spriteBatch, _spriteSheet, ScreenWidth, ScreenHeight);
                     break;
             }
 
-            TextToSpriteHandler.DrawString(_spriteBatch, $"score {GameStatsHandler.Score}", Color.Red, 10, 10, 8, 8);
-            TextToSpriteHandler.DrawString(_spriteBatch, $"round {_levelHandler.Round}    level {_levelHandler.Level}", Color.Red, 325, 10, 8, 8);
-            TextToSpriteHandler.DrawString(_spriteBatch, $"lives {GameStatsHandler.Lives}", Color.Red, 700, 10, 8, 8);
+            var halfScreenWidth = ScreenWidth * 0.5;
+
+            //TextToSpriteHandler.DrawString(_spriteBatch, $"score {GameStatsHandler.Score}", Color.Red, 10, 10, 8, 8);
+            //TextToSpriteHandler.DrawString(_spriteBatch, $"round {_levelHandler.Round}    level {_levelHandler.Level}", Color.Red, 325, 10, 8, 8);
+            //TextToSpriteHandler.DrawString(_spriteBatch, $"lives {GameStatsHandler.Lives}", Color.Red, 700, 10, 8, 8);
+
+            TextToSpriteHandler.DrawString(_spriteBatch, $"score {GameStatsHandler.Score}", Color.Red, (int)halfScreenWidth - 400, 10, 8, 8);
+            TextToSpriteHandler.DrawString(_spriteBatch, $"round {_levelHandler.Round}    level {_levelHandler.Level}", Color.Red, (int)halfScreenWidth - 75, 10, 8, 8);
+            TextToSpriteHandler.DrawString(_spriteBatch, $"lives {GameStatsHandler.Lives}", Color.Red, (int)halfScreenWidth + 400, 10, 8, 8);
 
             _starfield.Draw(_spriteBatch);
 
